@@ -32,7 +32,6 @@ async function getTemp(city) {
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=ae3b452c15565eed9225290d1c80cb6e`, { mode: 'cors' });
     const temp = await response.json();
     await updateDOM(temp);
-    await console.log(temp);
   } catch {
     window.alert('Error getting info from this city.');
   }
